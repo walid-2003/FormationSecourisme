@@ -15,7 +15,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Global Styles */
         header {
             background-color: #007bff;
             color: white;
@@ -89,7 +88,6 @@
             to { opacity: 1; }
         }
 
-        /* Steps */
         .steps {
             max-width: 800px;
             margin: 30px auto;
@@ -130,24 +128,19 @@
             font-size: 16px;
             line-height: 1.6;
             color: #333;
-            display: none; /* Hidden by default */
+            display: none;
             animation: slideIn 0.5s ease-in-out;
         }
 
-        @keyframes slideIn {
-            from { transform: translateY(-10px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-.video-container {
+        .video-container {
             width: 100%;
             max-width: 800px;
             margin: 20px auto;
             position: relative;
-            padding-top: 56.25%; /* Aspect ratio 16:9 */
+            padding-top: 56.25%;
         }
  
-.video-container iframe {
+        .video-container iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -156,7 +149,6 @@
             border: none;
         }
 
-        /* Back Button */
         .btn-back {
             margin-top: 30px;
             background-color: #dc3545;
@@ -178,6 +170,13 @@
             background-color: #007bff;
             color: white;
             margin-top: 50px;
+        }
+
+        /* Style pour l'annonce */
+        .adsense-container {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
         }
     </style>
     <script>
@@ -242,29 +241,38 @@
             </div>
             <div class="step">
                 <h3>5. Gestion des blessures</h3>
-                <p>En cas de blessures visibles, il est important de prendre les bonnes mesures :</p>
+                <p>Traitez les blessures visibles avec les techniques appropriées :</p>
                 <ul>
-                    <li>Pour les coupures et les éraflures, nettoyez la plaie avec de l'eau propre et appliquez un bandage stérile.</li>
-                    <li>Si un objet est enfoncé dans une plaie, ne le retirez pas. Stabilisez l'objet et protégez la plaie avec un bandage.</li>
-                    <li>Surveillez la victime pour des signes de choc (pâleur, transpiration excessive, faiblesse) et restez calme.</li>
+                    <li>Pour les saignements, appliquez une pression directe sur la plaie à l'aide d'un bandage ou d'un linge propre.</li>
+                    <li>Si la victime a une fracture, immobilisez la zone touchée à l'aide de brancards ou de bandages.</li>
                 </ul>
             </div>
- <!-- Section vidéo -->
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/lKta6hI3lx8?si=FdhSigqG7AgLywXM" 
-                title="YouTube video player" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-        </iframe>
-    </div>
         </div>
 
-        <a href="index.html" class="btn-back">Retour à l'accueil</a>
-    </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/lKta6hI3lx8?si=U43um3m4XgBwRPbk" frameborder="0" allowfullscreen></iframe>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Formation Secourisme. Tous droits réservés.</p>
-    </footer>
+        <a href="#" class="btn-back">Retour à l'accueil</a>
+    </div>
+<footer>
+    <p>&copy; 2024 Formation Secourisme. Tous droits réservés.</p>
+
+    <!-- Bloc d'annonce AdSense dans le footer -->
+    <div class="adsense-container">
+        <ins class="adsbygoogle"
+             style="display:block; text-align:center;"
+             data-ad-client="ca-pub-9530676918179352"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"></ins>
+        <!-- Remplacez par votre propre slot d'annonce -->
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+</footer>
+
+
+
 </body>
 </html>
