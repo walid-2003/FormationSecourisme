@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Secourisme - Étapes Détailées</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Global Styles */
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            color: black;
+            position: relative;
+        }
+
+        /* Animated Background */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .background-animation:before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 183, 255, 0.2), rgba(0, 123, 255, 0.8), rgba(0, 0, 50, 0.8));
+            animation: animateBG 15s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes animateBG {
+            0% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(-50px, -50px);
+            }
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Steps */
+        .steps {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .step {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step h3 {
+            font-size: 24px;
+            color: #007bff;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .step:hover {
+            background-color: #f1f1f1;
+        }
+
+        .step:hover h3 {
+            color: #0056b3;
+        }
+
+        .step p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            display: none; /* Hidden by default */
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+.video-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            padding-top: 56.25%; /* Aspect ratio 16:9 */
+        }
+ 
+.video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Back Button */
+        .btn-back {
+            margin-top: 30px;
+            background-color: #dc3545;
+            color: white;
+            padding: 15px 40px;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #c82333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const steps = document.querySelectorAll('.step');
+            steps.forEach(step => {
+                step.addEventListener('click', () => {
+                    const paragraph = step.querySelector('p');
+                    const isVisible = paragraph.style.display === 'block';
+                    paragraph.style.display = isVisible ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Formation en Secourisme - Étapes Détailées</h1>
+    </header>
+
+    <div class="main-container">
+        <div class="background-animation"></div>
+        <h2>Étapes de la Formation en Secourisme</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Évaluation de la situation</h3>
+                <p>Avant d'intervenir, il est crucial d'évaluer la scène pour garantir la sécurité de tous. Cela inclut :</p>
+                <ul>
+                    <li>Assurez-vous qu'il n'y a pas de dangers immédiats (circulation, feu, produits chimiques, etc.).</li>
+                    <li>Vérifiez si la victime est consciente en lui posant des questions simples.</li>
+                    <li>Si la victime est inconsciente, il faut procéder à une évaluation rapide des signes vitaux.</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h3>2. Alerter les secours</h3>
+                <p>Une fois la sécurité assurée, il est indispensable d'alerter les services d'urgence :</p>
+                <ul>
+                    <li>Appelez les services d'urgence (112 en Europe ou 911 en Amérique du Nord).</li>
+                    <li>Fournissez des informations claires : votre localisation, le nombre de victimes, leur état et toute situation potentiellement dangereuse.</li>
+                    <li>Si possible, demandez à quelqu'un d'autre de faire cet appel pendant que vous vous occupez de la victime.</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h3>3. Vérification des signes vitaux</h3>
+                <p>Pour déterminer la gravité de la situation, vérifiez les signes vitaux :</p>
+                <ul>
+                    <li>Vérifiez si la victime respire. Si elle ne respire pas ou ne réagit pas, commencez la RCP.</li>
+                    <li>Vérifiez le pouls au niveau du cou ou du poignet pour évaluer la circulation sanguine.</li>
+                    <li>Évaluez le niveau de conscience de la victime : elle doit répondre à vos questions ou à vos stimuli.</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h3>4. Réanimation Cardio-Pulmonaire (RCP)</h3>
+                <p>Si la victime est inconsciente et ne respire pas :</p>
+                <ul>
+                    <li>Placez la victime sur le dos sur une surface dure.</li>
+                    <li>Effectuez 30 compressions thoraciques au milieu de la poitrine (environ 5 à 6 cm de profondeur) à un rythme de 100 à 120 compressions par minute.</li>
+                    <li>Ensuite, donnez 2 insufflations (respirations) en veillant à ce que la tête soit légèrement en arrière pour ouvrir les voies respiratoires.</li>
+                    <li>Répétez ce cycle (30 compressions, 2 insufflations) jusqu'à l'arrivée des secours ou jusqu'à ce que la victime commence à respirer.</li>
+                </ul>
+            </div>
+            <div class="step">
+                <h3>5. Gestion des blessures</h3>
+                <p>En cas de blessures visibles, il est important de prendre les bonnes mesures :</p>
+                <ul>
+                    <li>Pour les coupures et les éraflures, nettoyez la plaie avec de l'eau propre et appliquez un bandage stérile.</li>
+                    <li>Si un objet est enfoncé dans une plaie, ne le retirez pas. Stabilisez l'objet et protégez la plaie avec un bandage.</li>
+                    <li>Surveillez la victime pour des signes de choc (pâleur, transpiration excessive, faiblesse) et restez calme.</li>
+                </ul>
+            </div>
+ <!-- Section vidéo -->
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/lKta6hI3lx8?si=FdhSigqG7AgLywXM" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
+    </div>
+        </div>
+
+        <a href="index.html" class="btn-back">Retour à l'accueil</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Formation Secourisme. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
